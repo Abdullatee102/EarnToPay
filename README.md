@@ -38,6 +38,7 @@ Pay Merchant                                            Withdraw to Wallet
 
 | Parameter                   | Value                                                                                                                                                                |
 | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Live Web3 Application**   | [https://earn-to-pay.vercel.app/](https://earn-to-pay.vercel.app/)                                                                                                   |
 | **Network**                 | Bohr Testnet                                                                                                                                                         |
 | **Chain ID**                | `968`                                                                                                                                                                |
 | **Native Token**            | BOT                                                                                                                                                                  |

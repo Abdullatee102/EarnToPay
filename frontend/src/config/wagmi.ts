@@ -12,7 +12,11 @@ export const queryClient = new QueryClient({
   },
 });
 
-const projectId = import.meta.env.VITE_REOWN_PROJECT_ID || 'b0ed2f41971704df2800043e6799378c';
+const projectId = import.meta.env.VITE_REOWN_PROJECT_ID || '';
+
+if (!projectId && typeof window !== 'undefined') {
+  console.warn('VITE_REOWN_PROJECT_ID is not configured in environment variables.');
+}
 
 export const wagmiAdapter = new WagmiAdapter({
   projectId,
@@ -27,7 +31,7 @@ createAppKit({
   metadata: {
     name: 'EarnToPay',
     description: 'Complete Tasks → Earn BOT → Pay Merchants on Bohr Testnet',
-    url: typeof window !== 'undefined' ? window.location.origin : 'https://earntopay.app',
+    url: typeof window !== 'undefined' ? window.location.origin : 'https://earn-to-pay.vercel.app',
     icons: ['https://avatars.githubusercontent.com/u/37784886'],
   },
   features: {
